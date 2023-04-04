@@ -1,4 +1,5 @@
 network="192.168.100"
+
 for addr in {100..255}; do
     ping -c 2 -W 1 "${network}.${addr}" > /dev/null 2>&1
     if [ $? -eq 0 ]; then
